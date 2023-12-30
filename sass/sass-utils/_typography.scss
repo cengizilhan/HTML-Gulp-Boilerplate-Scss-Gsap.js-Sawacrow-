@@ -1,0 +1,184 @@
+//Heading
+@mixin font-h1 {
+  // H1 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 75px;
+  /* Recommend for responsive css clamp(mobile, mid, desktop) -
+  you can change 5vw value
+   font-size:clamp(50px, 5vw, 75px); */
+  line-height: 133.33%;
+  text-decoration: none;
+  letter-spacing: -0.05em; }
+
+@mixin font-h2 {
+  // H2 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 60px;
+  /* Recommend for responsive css clamp(mobile, mid, desktop) -
+  you can change 5vw value
+   font-size:clamp(48px, 5vw, 60px); */
+  line-height: 133.33%;
+  text-decoration: none;
+  letter-spacing: -0.05em;}
+
+@mixin font-h3 {
+  // H3 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 140%;
+  text-decoration: none;
+  letter-spacing: -0.05em; }
+
+@mixin font-h4 {
+  // H4 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 116.67%;
+  text-decoration: none;
+  letter-spacing: -0.05em; }
+
+@mixin font-h5 {
+  // H5 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 140%;
+  text-decoration: none;
+  letter-spacing: -0.05em;}
+
+@mixin font-h6 {
+  // H6 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  text-decoration: none;
+  letter-spacing: -0.03em; }
+
+@mixin font-a1 {
+  // A1 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-decoration: none;
+  letter-spacing: -0.04em; }
+
+@mixin font-a2 {
+  // A2 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 133.33%;
+  text-decoration: none;
+  letter-spacing: -0.05em; }
+
+@mixin font-a3 {
+  // A3 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 111.11%;
+  text-decoration: none;
+  letter-spacing: -0.03em; }
+
+@mixin font-a4 {
+  // A4 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 142.86%;
+  text-decoration: none;
+  letter-spacing: -0.05em; }
+
+@mixin font-p1 {
+  // P1 //
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 125%;
+  text-decoration: none;
+  letter-spacing: -0.05em; }
+
+@mixin font-p2 {
+  // P2 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 142.86%;
+  text-decoration: none;
+  letter-spacing: -0.02em; }
+
+@mixin font-b1 {
+  // B1 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 133.33%;
+  text-decoration: none;
+  letter-spacing: -0.02em; }
+
+@mixin font-b2 {
+  // B2 //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 76.92%;
+  text-decoration: none;
+  letter-spacing: -0.03em; }
+
+@mixin font-c1 {
+  // C1 //
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 156.25%;
+  text-decoration: none;
+  letter-spacing: -0.05em; }
+
+@mixin font-c2 {
+  // C2 //
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 115.38%;
+  text-decoration: none;
+  letter-spacing: -0.03em; }
+
+@mixin font-m {
+  // M //
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+@mixin font-o {
+  // O //
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 125%;
+  text-decoration: none;
+  letter-spacing: -0.02em; }
+
+@mixin font-o2 {
+  // O2 //
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 111.11%;
+  text-decoration: none;
+  letter-spacing: normal;
+}
+
+/* Developed by sawacrow
+https://www.buymeacoffee.com/sawacrow :If you wanna support, you can buy me a pizza :)
+https://github.com/sawacrow/typograpgy-generator-figma : You can check the source code here and contribute or support
+*/

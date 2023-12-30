@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html color-mode="light" lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta content="noindex, nofollow" name="robots" />
+    <!-- Bootstrap CSS -->
+    <link href="./assets/vendor/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/vendors.min.css" rel="stylesheet" />
+    <link href="./assets/css/index.css" rel="stylesheet" />
+
+    <title>Sawacrow HTML Boilerplate</title>
+  </head>
+
+  <body class="container">
+    <header class="mt-3">
+      <h1>Sawacrow HTML Boilerplate</h1>
+    </header>
+
+    <main>
+   
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Page</th>
+            <th scope="col">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+     
+          <tr>
+            <th scope="row">1</th>
+            <td><a href="./index-main.html" target="_blank">Index HTML</a></td>
+            <td>Page</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </main>
+    <style>
+      .comp-container {
+        display: flex;
+        gap: 20px;
+      }
+    </style>
+
+    <section class="mt-5 d-none" id="darktheme">
+      <hr />
+      <h2>DarkMode</h2>
+
+      <section class="color-mode">
+        <!--- Light mode button --->
+        <button
+          aria-label="Toggle light mode"
+          class="color-mode__btn light--hidden"
+        >
+          Toggle Light Mode
+        </button>
+
+        <!--- Dark mode button --->
+        <button
+          aria-label="Toggle dark mode"
+          class="color-mode__btn dark--hidden"
+        >
+          Toggle Dark Mode
+        </button>
+
+        <div class="color-mode__section">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut,
+          porro beatae animi ipsa cumque sunt dicta, quae quas ducimus incidunt
+          dignissimos enim iusto! Id accusamus cupiditate quia voluptatem natus?
+        </div>
+
+        <script>
+          var toggleColorMode = function toggleColorMode(e) {
+            // Switch to Light Mode
+            if (e.currentTarget.classList.contains("light--hidden")) {
+              // Sets the custom html attribute
+              document.documentElement.setAttribute("color-mode", "light"); // Sets the user's preference in local storage
+
+              localStorage.setItem("color-mode", "light");
+              return;
+            }
+            /* Switch to Dark Mode
+          Sets the custom html attribute */
+            document.documentElement.setAttribute("color-mode", "dark"); // Sets the user's preference in local storage
+
+            localStorage.setItem("color-mode", "dark");
+          }; // Get the buttons in the DOM
+
+          var toggleColorButtons =
+            document.querySelectorAll(".color-mode__btn"); // Set up event listeners
+
+          toggleColorButtons.forEach(function (btn) {
+            btn.addEventListener("click", toggleColorMode);
+          });
+        </script>
+      </section>
+    </section>
+
+    <section class="d-none" id="components">
+      <hr />
+
+      <section class="Components d-none">
+        <div class="mt-5">
+          <h5>Button</h5>
+          <hr />
+          <div class="d-flex comp-container">
+            <section
+              class=""
+              style="gap: 10px; display: flex; flex-direction: column"
+            >
+              <a class="custom-btn-primary" href="#">a custom-btn-primary</a>
+              <button class="custom-btn-primary">
+                button custom-btn-primary
+              </button>
+
+              <a class="custom-btn-secondary" href="#"
+                >a custom-btn-secondary</a
+              >
+              <button class="custom-btn-secondary">
+                btn custom-btn-secondary
+              </button>
+
+              <a class="custom-btn-third" href="#">a custom-btn-third</a>
+              <button class="custom-btn-third">btn custom-btn-third</button>
+            </section>
+          </div>
+          <div class="d-flex comp-container mt-3">
+            <div>LG Button</div>
+            <button class="button-lg">Send us!</button>
+            <button class="button-lg">
+              Withicon <i class="icon icon-Trash-Icon"></i>
+            </button>
+            <button class="button-lg">
+              <i class="icon icon-Trash-Icon"></i> Withicon
+            </button>
+          </div>
+        </div>
+        <div class="mt-5">
+          <h5>Anchor</h5>
+          <hr />
+          <div class="d-flex comp-container">
+            <a class="anchor-1" href="#">normal</a>
+            <a class="anchor-1 anchor-fail" href="#">warning</a>
+            <a class="anchor-1 anchor-success" href="#">success</a>
+          </div>
+        </div>
+        <div class="mt-5 mb-5">
+          <h5>Single Action Button's</h5>
+          <hr />
+          <div class="d-flex comp-container mt-3">
+            <div>SM Anchor</div>
+            <a class="button-sgb" href="#"
+              ><i class="icon icon-Trash-Icon"></i
+            ></a>
+          </div>
+          <div class="d-flex comp-container mt-3">
+            <div>MD Anchor</div>
+            <a class="button-sgb" href="#"
+              ><i class="icon icon-Trash-Icon"></i
+            ></a>
+          </div>
+          <div class="d-flex comp-container mt-3">
+            <div>LG Anchor</div>
+            <a class="button-sgb" href="#"
+              ><i class="icon icon-Trash-Icon"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="mt-5 mb-5">
+          <h5>Input</h5>
+          <hr />
+          <div class="d-flex comp-container">
+            <section class="input-holder">
+              <span class="input-titler">e-mail adress</span>
+              <input placeholder="enter your name." type="text" />
+              <div class="input-holder-absolute"></div>
+            </section>
+
+            <div class="toggler-container">
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div>
+              <div class="round-checkbox">
+                <input checked id="checkbox" type="checkbox" />
+                <label for="checkbox"></label>
+              </div>
+            </div>
+
+            <div class="ml-3">
+              <input type="radio" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="mt-5 d-none" id="typo">
+      <hr />
+      <h2>Typography</h2>
+
+      <h1>h1</h1>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <h4>h4</h4>
+      <h5>h5</h5>
+      <h6>h6</h6>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+
+    <!---<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>-->
+
+    <!--<script src="./dist/js/vendor.min.js"></script>-->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  --></body>
+</html>

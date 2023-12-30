@@ -1,0 +1,240 @@
+@mixin transition {
+  transition: .4s ease-in-out;
+}
+
+@mixin img-zoom {
+  transition: transform .5s;
+  overflow: hidden;
+  transform: scale(1.1);
+}
+
+/* pure collapsing animation
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  
+}
+*/
+
+@mixin animation-fade1 {
+  animation: fade1 0.5s ease-in-out;
+}
+
+@mixin animation-fade2 {
+  animation: fade2 0.5s ease-in-out;
+}
+
+@mixin animation-fade3 {
+  animation: fade3 0.5s ease-in-out;
+}
+
+@mixin animation-fade4 {
+  animation: fade4 0.5s ease-in-out;
+}
+
+@mixin animation-ken-burns {
+  animation: ken-burns-in 15s ease-in-out infinite;
+  
+}
+@mixin animation-ken-burns-without-rotation {
+  animation: ken-burns-in-without-rotation 15s ease-in-out infinite;
+  
+}
+
+@mixin animation-ken-burns-2x {
+  animation: ken-burns-in 10s ease-in-out infinite;
+  
+}
+
+@keyframes ken-burns-in {
+  0% {
+    
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    transform-origin: bottom left;
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+    
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+    
+    -o-transform: scale(1.0);
+    /* Opera */
+    
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
+  50% {
+    
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    
+    -webkit-transform: scale(1.2);
+    /* Safari and Chrome */
+    
+    -o-transform: scale(1.2);
+    /* Opera */
+    
+    -moz-transform: scale(1.2);
+    /* Firefox */
+  }
+  
+  100% {
+    
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    transform-origin: bottom left;
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+    
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+    
+    -o-transform: scale(1.0);
+    /* Opera */
+    
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
+  
+}
+@keyframes ken-burns-in-without-rotation {
+  0% {
+    
+   
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+    
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+    
+    -o-transform: scale(1.0);
+    /* Opera */
+    
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
+  50% {
+    
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    
+    -webkit-transform: scale(1.2);
+    /* Safari and Chrome */
+    
+    -o-transform: scale(1.2);
+    /* Opera */
+    
+    -moz-transform: scale(1.2);
+    /* Firefox */
+  }
+  
+  100% {
+    
+  
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+    
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+    
+    -o-transform: scale(1.0);
+    /* Opera */
+    
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
+  
+}
+
+
+@keyframes fade1 {
+  0% {
+    opacity: 0
+  }
+  25% {
+    opacity: 0.2
+  }
+  50% {
+    opacity: 0.5
+  }
+  75% {
+    opacity: 0.7
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes fade2 {
+  0% {
+    opacity: 0
+  }
+  25% {
+    opacity: 1
+  }
+  50% {
+    opacity: 0
+  }
+  75% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes fade3 {
+  0% {
+    opacity: 0
+  }
+  25% {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+  75% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes fade4 {
+  0% {
+    opacity: 0
+  }
+  25% {
+    opacity: 0
+  }
+  50% {
+    opacity: 0
+  }
+  75% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

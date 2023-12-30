@@ -1,0 +1,53 @@
+/*
+Guides:
+https://github.com/royalfig/dark-mode-demo 
+https://codepen.io/sawacrow/pen/NWYGzrY   
+https://ryanfeigenbaum.com/dark-mode/   */
+
+/* If want dynamically color on same variable > 
+https://github.com/royalfig/dark-mode-demo https://ryanfeigenbaum.com/dark-mode/ 
+  */
+
+$color-gainsboro: #fff;
+$color-white: #FFFFFF;
+$color-brightGray: #EBECF4;
+$color-yellow: #DBFF74;
+$color-black:#000;
+
+body[data-bs-theme="light"]
+{
+    background-color: #FFFFFF !important;
+    .filter-black-dark{
+    filter:invert(90%) sepia(2%) saturate(7%) hue-rotate(30deg) brightness(97%) contrast(104%)
+    }
+    .last-panel
+    {
+        background:transparent;
+    }
+    footer {
+        background-color: #fff;
+        a,span {
+            color: #000;
+        }
+    }
+.color-black-dark{
+    *
+    {color:#000}
+}
+    header {
+        *{
+            color: #000;
+            
+        }
+    }
+    .header{
+        border-color:#000000;
+        li{
+            &:hover{
+                border-color:#000000;
+            }
+        }
+    }
+
+}
+

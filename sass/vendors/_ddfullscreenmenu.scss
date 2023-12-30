@@ -1,0 +1,194 @@
+body { 
+  -webkit-animation: bugfix infinite 1s; 
+}
+
+@-webkit-keyframes bugfix { 
+  from {padding:0;} 
+  to {padding:0;} 
+}
+
+div#navtoggler{  /* Sample burger icon to toggle menu state */
+  z-index: 9;
+  display: block;
+  position: relative;
+  font-size: 8px;
+  /* change font size to change label dimensions. Leave width/height below alone */
+  width: 4em;
+  height: 2.5em;
+  top: 0;
+  left: 0;
+  text-indent: -1000px;
+  border: 0.6em solid black;
+  /* border color */
+  border-width: 0.6em 0;
+  cursor: pointer;
+}
+
+div#navtoggler::before{ /* Sample burger icon */
+  /* inner strip inside label */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0.6em;
+  top: 50%;
+  margin-top: -0.3em;
+  left: 0;
+  background: black; /* stripes background color. Change to match border color of parent label above */
+}
+
+nav#ddfullscreenmenu{ /* Full screen nav menu */
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  -webkit-transform: scale(0.9);  /* initially scale down nav size */
+  transform: scale(0.9);
+  background: #AAEDEA; /* menu background color */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+	z-index: 100000;
+  opacity: 0;
+  overflow: hidden;
+  overflow-y: auto;
+	text-align: center;
+  -webkit-transition: visibility 0s 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  transition: visibility 0s 0.5s, opacity 0.5s, transform 0.5s;
+}
+
+nav#ddfullscreenmenu.openmenu{ /* open menu class */
+	visibility: visible;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+  -webkit-transition-delay: 0s;
+  -transition-delay: 0s;
+}
+
+nav#ddfullscreenmenu div#closex{ /* Large x close button inside nav */
+  width: 50px;
+  height: 50px;
+	overflow: hidden;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+	text-indent: -1000px;
+  z-index: 10;
+  top: 5px;
+  right: 5px;
+}
+
+nav#ddfullscreenmenu div#closex::before, nav div#closex::after{ /* render large cross inside close button */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: black;
+  top: 50%;
+  margin-top: -3px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+nav#ddfullscreenmenu div#closex::after{ /* render large cross inside close button */
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+div#ulwrapper{
+  position: relative;
+  width: 500px; /* menu UL width */
+  margin: auto;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  -webkit-perspective-origin: 50%;
+  perspective-origin: 50%;
+}
+
+nav#ddfullscreenmenu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+  font: bold 2em 'Bitter', sans-serif; /* use google font inside nav UL */
+	-webkit-transition: all 0.5s .1s;
+	transition: all 0.5s .1s;
+}
+
+nav#ddfullscreenmenu ul li{
+  margin-bottom: 25px;
+  position: relative;
+  display: block;
+}
+
+nav#ddfullscreenmenu ul li.header > a:after{ /* right arrow inside header LIs */
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 8px solid darkred;
+  border-color: transparent transparent transparent darkred;
+}
+
+nav#ddfullscreenmenu ul.submenu{ /* style for non "first page" ULs */
+  position: absolute;
+  top: 0;
+  left: 0;
+	opacity: 0;
+  pointer-events: none;
+  transform: translate3d(100%, 0, 0);
+}
+
+nav#ddfullscreenmenu ul li a,
+nav#ddfullscreenmenu ul li.breadcrumb{
+	text-decoration: none;
+  color: black; /* link color */
+  text-transform: uppercase;
+  padding: 10px;
+  display: block;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+nav#ddfullscreenmenu ul li.breadcrumb{
+  background: #eee;
+  position: relative;
+}
+
+nav#ddfullscreenmenu ul li.breadcrumb:after{ /* back arrow inside breadcrumb LI */
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 10px solid darkred;
+  border-color: transparent darkred transparent transparent;
+}
+
+nav#ddfullscreenmenu ul li a:hover{
+  background: #eee;
+}
+
+nav#ddfullscreenmenu ul.hidemenu{
+  transform: rotateY(30deg) translateZ(-5px) !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+nav#ddfullscreenmenu ul.showmenu{
+  transform: translate3d(0,0,0) !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+}

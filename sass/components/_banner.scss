@@ -1,0 +1,26 @@
+.breadcrumb-wrap{
+  padding: 10px 0px;
+  padding-left: 15px;
+
+  ol{
+    margin:0;
+  }
+  a{
+    &:hover{
+      color: #B51F1F;
+    }
+  }
+  a,li{
+    color: #706F6F;
+    @include font-c2;
+    font-size:13px;
+    
+  }
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: var(--bs-breadcrumb-divider-color);
+  content: var(--bs-breadcrumb-divider, ">");
+}
