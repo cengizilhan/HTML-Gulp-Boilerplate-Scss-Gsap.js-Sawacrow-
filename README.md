@@ -3,8 +3,10 @@
 This HTML boilerplate is prepared by bringing together essential packages such as SCSS, jQuery, form mask js, animation js, Bootstrap, mobile menu, desktop multi-menu, and Swiper js, creating a ready-to-use template for every HTML project.
 
 https://github.com/cengizilhan
+https://www.linkedin.com/in/cengizilhan/
 
 https://github.com/otabekgh
+https://www.linkedin.com/in/otabekgh/
 
 ## Install and Run
 1) install /npm install or /yarn install
