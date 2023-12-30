@@ -22,7 +22,7 @@ https://github.com/otabekgh
 ### Input Mask
 
 run by attribute
-
+```
 <input data-inputmask="'alias': 'email'" />
 <input data-inputmask="'alias': 'datetime'" />
 <input data-inputmask="'mask': '9', 'repeat': 10, 'greedy' : false" />
@@ -30,13 +30,13 @@ run by attribute
 <input  type="text" class="form-control"  data-inputmask="'mask': 'a', 'repeat': 30, 'greedy' : false"  aria-describedby="emailHelp" placeholder="First Name*">
 letters only
 <input placeholder="testt" id="example232"  data-inputmask-regex="[a-zA-Z- ]*" />
-
+```
 https://github.com/RobinHerbots/Inputmask
 
 ### Flatpickr
-
+```
 <input class="flatpickr flatpickr-input" type="text" placeholder="Select Date.." data-id="minDate" readonly="readonly">
 
 https://flatpickr.js.org/examples/#mindate-and-maxdate
 
-`
+```
